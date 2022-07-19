@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/dashboardFragment">
+
+  <fragment
+    android:id="@+id/dashboardFragment"
+    android:name="com.jorgereyes.openbankchallenge.presentation.ui.HeroDashboardFragment"
+    android:label="fragment_dashboard"
+    tools:layout="@layout/fragment_hero_dashboard">
+    <action
+      android:id="@+id/action_dashboardFragment_to_detailsFragment"
+      app:destination="@id/heroDetailFragment" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/heroDetailFragment"
+    android:name="com.jorgereyes.openbankchallenge.presentation.ui.HeroDetailFragment"
+    android:label="fragment_hero_detail"
+    tools:layout="@layout/fragment_hero_detail">
+    <argument
+      android:name="selected_hero"
+      app:argType="com.jorgereyes.openbankchallenge.data.model.Result" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/savedHeroesFragment"
+    android:name="com.jorgereyes.openbankchallenge.presentation.ui.FavoriteHeroesFragment"
+    android:label="fragment_saved_hero"
+    tools:layout="@layout/fragment_favorite_heroes">
+    <action
+      android:id="@+id/action_savedFragment_to_detailsFragment"
+      app:destination="@id/heroDetailFragment" />
+  </fragment>
+
+
+
+</navigation>

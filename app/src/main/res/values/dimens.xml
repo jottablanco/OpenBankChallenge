@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Text Sizes -->
+  <dimen name="header_text_size">22sp</dimen>
+  <dimen name="sub_header_text_size">18sp</dimen>
+  <dimen name="content_text_size">14sp</dimen>
+
+  <!-- Margins -->
+  <dimen name="main_content_margins">15dp</dimen>
+  <dimen name="element_margin">10dp</dimen>
+  <dimen name="start_view_margin">20dp</dimen>
+
+  <!-- Thumbnail Size -->
+  <dimen name="thumbnail_size">90dp</dimen>
+  <dimen name="thumbnail_height">100dp</dimen>
+</resources>

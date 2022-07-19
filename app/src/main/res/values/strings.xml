@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">Open Bank Challenge</string>
+  <string name="attribution_string">Data provided by Marvel. \u00A9 2022</string>
+  <string name="thumbnail_content_description">Hero Image</string>
+  <string name="description_placeholder">JARVIS did not provided a description to this Character. It rules though, don\'t you think?</string>
+  <string name="characters_menu_item">Characters</string>
+  <string name="saved_characters_menu_item">My Team</string>
+</resources>
