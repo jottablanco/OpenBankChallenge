@@ -1,4 +1,6 @@
+--------
 OpenBank Challenge: Marvel Characters App.
+--------
 
 --------
 Summary:
@@ -21,6 +23,7 @@ The app uses the following components
 - LiveData: Cycle aware observable to manage data coming from repositories 
 - SplashScreen Android Component: simple android component to create an animated splash screen
 - Navigation Component: Make navigation between fragments easily by using a nav_graph 
+- Carrousel 3rd Party Library 
 
 Note: The challenge asks to use the API to fetch the character details but it seems more practical to pass the details in a bundle that 
 repeats the logic of fetching data from an API (used to get the characters list). Instead I passed the data to avoid unnecessary calls to 
