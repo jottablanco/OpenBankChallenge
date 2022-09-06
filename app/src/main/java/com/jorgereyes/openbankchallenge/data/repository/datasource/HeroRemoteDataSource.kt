@@ -4,5 +4,5 @@ import com.jorgereyes.openbankchallenge.data.model.APIResponse
 import retrofit2.Response
 
 interface HeroRemoteDataSource {
-  suspend fun getHeroesFromAPI(): Response<APIResponse>
+  suspend fun getHeroesFromAPI(page: Int): Response<APIResponse>
 }

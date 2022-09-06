@@ -63,7 +63,7 @@ class HeroDashboardFragment : Fragment() {
   }
 
   private fun viewHeroesList() {
-    viewModel.getHeroesList()
+    viewModel.getHeroesList(page)
     viewModel.heroesData.observe(viewLifecycleOwner) { response ->
       when (response) {
         is Resource.Success -> {
@@ -111,7 +111,7 @@ class HeroDashboardFragment : Fragment() {
       val shouldPaginate = !isLoading && !isLastPage && hasReachedToEnd && isScrolling
       if (shouldPaginate) {
         page++
-        viewModel.getHeroesList()
+        viewModel.getHeroesList(page)
         isScrolling = false
       }
     }

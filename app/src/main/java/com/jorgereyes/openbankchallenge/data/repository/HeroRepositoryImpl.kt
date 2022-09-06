@@ -14,8 +14,8 @@ class HeroRepositoryImpl (
   private val heroRemoteDataSource: HeroRemoteDataSource,
   private val heroLocalDataSource: HeroLocalDataSource
 ) : HeroesRepository {
-  override suspend fun getHeroesList(): Resource<APIResponse> {
-    return responseToResource(heroRemoteDataSource.getHeroesFromAPI())
+  override suspend fun getHeroesList(page: Int): Resource<APIResponse> {
+    return responseToResource(heroRemoteDataSource.getHeroesFromAPI(page))
   }
 
   override suspend fun saveHeroes(heroesList: List<Result>) {

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface HeroesRepository {
 
-  suspend fun getHeroesList(): Resource<APIResponse>
+  suspend fun getHeroesList(page: Int): Resource<APIResponse>
   suspend fun saveHeroes(heroesList: List<Result>)
   suspend fun deleteHero(result: Result)
   suspend fun getFavoriteCharacters(): Flow<List<FavoriteCharacter>>

@@ -28,16 +28,16 @@ class HeroViewModel constructor(
 
   val heroesData: MutableLiveData<Resource<APIResponse>> = MutableLiveData()
 
-  fun getHeroesList() = viewModelScope.launch(Dispatchers.IO) {
+  fun getHeroesList(page: Int) = viewModelScope.launch(Dispatchers.IO) {
     heroesData.postValue(Resource.Loading())
 
     try {
-        if(isNetworkAvailable(app)) {
-          val apiResult =  getHeroesListUseCase.execute()
-          heroesData.postValue(apiResult)
-        } else {
-          heroesData.postValue(Resource.Error("Check Internet Connection"))
-        }
+      if (isNetworkAvailable(app)) {
+        val apiResult = getHeroesListUseCase.execute(page)
+        heroesData.postValue(apiResult)
+      } else {
+        heroesData.postValue(Resource.Error("Check Internet Connection"))
+      }
     } catch (ex: Exception) {
       heroesData.postValue(Resource.Error(ex.message.toString()))
     }

@@ -1,12 +1,12 @@
 package com.jorgereyes.openbankchallenge.presentation.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.DrawableRes
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.snackbar.Snackbar
 import com.jorgereyes.openbankchallenge.R
 import com.jorgereyes.openbankchallenge.data.model.FavoriteCharacter
 import com.jorgereyes.openbankchallenge.data.model.Result
@@ -46,6 +46,9 @@ class HeroDetailFragment : Fragment() {
     }
     binding.fabSaveHero.setOnClickListener {
       viewModel.saveFavoriteCharacters(transformObject(hero))
+      val snackbar = Snackbar.make(view, "${hero.characterName} was recruited for your Heroes team!", Snackbar.LENGTH_SHORT)
+      snackbar.anchorView = binding.fabSaveHero
+      snackbar.show()
     }
   }
 
@@ -63,7 +66,7 @@ class HeroDetailFragment : Fragment() {
     return mediaList
   }
 
-  private fun transformObject(hero: Result) : FavoriteCharacter {
+  private fun transformObject(hero: Result): FavoriteCharacter {
     return FavoriteCharacter(
       favoriteCharacterId = hero.characterId,
       favoriteCharacterDescription = hero.characterDescription,

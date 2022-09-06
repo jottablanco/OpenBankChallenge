@@ -5,9 +5,9 @@ import com.jorgereyes.openbankchallenge.data.util.Resource
 import com.jorgereyes.openbankchallenge.domain.repository.HeroesRepository
 import javax.inject.Inject
 
-class GetHeroesListUseCase (private val heroesRepository: HeroesRepository) {
+class GetHeroesListUseCase(private val heroesRepository: HeroesRepository) {
 
-  suspend fun execute(): Resource<APIResponse> {
-    return heroesRepository.getHeroesList()
+  suspend fun execute(page: Int): Resource<APIResponse> {
+    return heroesRepository.getHeroesList(page)
   }
 }
