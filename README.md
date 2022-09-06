@@ -29,6 +29,20 @@ Note: The challenge asks to use the API to fetch the character details but it se
 repeats the logic of fetching data from an API (used to get the characters list). Instead I passed the data to avoid unnecessary calls to 
 the API and added favorites capability. A soul for a soul! wink wink ;)
 
+-------------------
+A little sneak peek:
+-------------------
+
+List           |  Detail
+:-------------------------:|:-------------------------:
+![list](https://user-images.githubusercontent.com/42120921/188724540-979841d4-d08c-4465-938f-b1256884dd83.png)  |  ![detail](https://user-images.githubusercontent.com/42120921/188724572-7977626d-982c-4b70-831f-ec48bec51fe9.png)
+
+
+
+
+
+
+
 
 For more details on the purpose of this feature, its limitations and detailed usage,
 please read the SDK guide at
